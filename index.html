@@ -9,6 +9,14 @@
       display: table;
       padding: 10px;
     }
+    div.button-controls{
+      padding: 5px;
+      margin: 5px;
+      width:140px;
+      display: inline-table;
+      display: inline-block;
+      float: center;
+    }
   </style>
 </head>
 <body>
@@ -18,14 +26,24 @@
   <h1 id='counter'>
     0
   </h1>
-  <button id='-' > ➖ </button>
-  <button id='+' > ➕ </button>
-  <button id='<3' > ❤️ </button>
-  <button id='pause' > pause </button>
-  <br>
-  <button id='-5' > ➖5 </button>
-  <button id='+5' > ➕5 </button>
-
+  <div class="button-controls">
+  <table>
+    <tr>
+      <td><button id='-' > ➖ </button></td>
+      <td><button id='+' > ➕ </button></td>
+    </tr>
+    <tr>        
+      <td><button id='-5' > ➖5 </button></td>
+      <td><button id='+5' > ➕5 </button></td>
+    </tr>      
+    <tr>
+      <td><button id='poop' > 💩 </button></td>
+      <td><button id='<3' > ❤️ </button></td>
+    </tr>
+    <button id='pause' > pause </button>
+  </table>
+  </div>
+  
   <ul class='likes'></ul>
   <div>
     

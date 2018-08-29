@@ -4,6 +4,7 @@ const plusButton = document.getElementById('+');
 const minus5Button = document.getElementById('-5');
 const plus5Button = document.getElementById('+5');
 const likeButton = document.getElementById('<3');
+const poopButton = document.getElementById('poop');
 const likesText = document.querySelector('.likes');
 const pauseButton = document.getElementById('pause');
 const commentSubmitButton = document.getElementById('submit');
@@ -29,8 +30,8 @@ function displayLikes() {
   likesText.innerHTML = `Total Likes: ${likeHash[seconds]}`;
 }
 
-function addLike() {
-  likeHash[seconds] = likeHash[seconds] + 1;
+function changeLike(num) {
+  likeHash[seconds] = likeHash[seconds] + num;
   displayLikes();
 }
 
@@ -53,7 +54,8 @@ minusButton.addEventListener('click', ()=> changeCounter(-1));
 plusButton.addEventListener('click', ()=> changeCounter(1));
 minus5Button.addEventListener('click', ()=> changeCounter(-5));
 plus5Button.addEventListener('click', ()=> changeCounter(5));
-likeButton.addEventListener('click', ()=> addLike());
+likeButton.addEventListener('click', ()=> changeLike(1));
+poopButton.addEventListener('click', ()=> changeLike(-1));
 pauseButton.addEventListener('click', ()=> togglePause());
 form.addEventListener('submit', e => e.preventDefault())
 commentSubmitButton.addEventListener('click', (e)=> addComment(e));
